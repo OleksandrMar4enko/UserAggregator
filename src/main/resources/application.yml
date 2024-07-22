@@ -1,0 +1,25 @@
+db:
+  datasources:
+  - name: data-base-2
+    strategy: postgres
+    url: jdbc:postgresql://localhost:5432/useraggregator2
+    table: users
+    user: postgres
+    password: postgres
+    mapping:
+      id: user_id
+      username: login
+      name: first_name
+      surname: last_name
+  - name: data-base-1
+    strategy: postgres
+    url: jdbc:postgresql://localhost:5432/useraggregator
+    table: users
+    user: postgres
+    password: postgres
+    mapping:
+      id: user_id
+      username: login
+      name: first_name
+      surname: last_name
+
